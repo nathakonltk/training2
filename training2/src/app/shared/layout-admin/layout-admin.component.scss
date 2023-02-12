@@ -1,0 +1,53 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .layout-header {
+        // background-color: #2b58a8;
+        //border-top: 5px solid #1495ce;
+        box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+        z-index: 2;
+       // color: white;
+        .mat-toolbar {
+            height: 100px;
+        }
+    }
+    
+    // .layout-breadcrumb {
+    //     // background-color: white;
+    //     // border-bottom: 1px solid lightgray;
+    // }
+    // .layout-footer {
+    //     background-color: $white;
+    // }
+    // .layout-sidenav {
+    //     background-color: $white;
+    //     border-right: 1px solid lightgray;
+    // }
+    // .layout-content {
+    //     background-color: #ececec;
+    //     padding: 15px;
+    // }
+    // .navbar-menu-subheader {
+    //     height: 20px !important;
+    //     padding: 5px 0px 0px 16px !important;
+    //     font-weight: 400;
+    //     font-size: 12px;
+    // }
+    // .navbar-menu-icon {
+    //     color: $orageColor;
+    // }
+    // .navbar-menu-item {
+    //     height: 40px !important;
+    //     color: $blueColor;
+    // }
+    // .navbar-menu-push-bottom {
+    //     position: absolute !important;
+    //     bottom: 0 !important;
+    //     color: $blueColor;
+    // }
+}

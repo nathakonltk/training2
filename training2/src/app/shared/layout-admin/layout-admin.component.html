@@ -1,0 +1,20 @@
+<div class="layout">
+    <mat-toolbar class="layout-header" color="primary">
+        <app-header fxFlex (toggleClick)="toggleSideNav()"></app-header>
+    </mat-toolbar>
+
+    <mat-drawer-container fxFlex class="">
+        <!-- mode="side,over" -->
+        <mat-drawer fxFlex="250px" #main_menu class="main_menu" mode="side"  opened="true">
+            <div fxLayout="column">
+                <app-menu></app-menu>
+            </div>
+        </mat-drawer>
+        <mat-drawer-content  class="main_container">
+            Main content
+            <router-outlet></router-outlet>
+        </mat-drawer-content>
+        
+    </mat-drawer-container>
+</div>
+
