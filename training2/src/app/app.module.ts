@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,12 +18,13 @@ import { MenuItemComponent } from './shared/menu-item/menu-item.component';
     HeaderComponent,
     LayoutAdminComponent,
     MenuComponent,
-    MenuItemComponent
+    MenuItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    //HttpClientModule,
     MaterialModule.forRoot()
   ],
   providers: [],

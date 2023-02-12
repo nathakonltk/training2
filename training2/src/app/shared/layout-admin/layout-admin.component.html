@@ -4,13 +4,13 @@
     </mat-toolbar>
 
     <mat-drawer-container fxFlex class="">
-        <!-- mode="side,over" -->
-        <mat-drawer fxFlex="250px" #main_menu class="main_menu" mode="side"  opened="true">
+        <!-- mode="side,over,push" -->
+        <mat-drawer fxFlex="250px" #main_menu mode="side" class="layout-sidenav">
             <div fxLayout="column">
                 <app-menu></app-menu>
             </div>
         </mat-drawer>
-        <mat-drawer-content  class="main_container">
+        <mat-drawer-content  class="main_container" >
             Main content
             <router-outlet></router-outlet>
         </mat-drawer-content>

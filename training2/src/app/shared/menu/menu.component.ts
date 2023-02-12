@@ -9,13 +9,24 @@ import { NavItem } from '../../_models';
 export class MenuComponent {
   navItems: NavItem[] = [
 
-    
+    {
+      displayName: 'หน้าหลัก',
+      disabled: true,
+      iconName: 'fas fa-user',
+      route: '/admin',
+      children: [
+        
+      ]
+    },
     {
       displayName: 'ข้อมูลเจ้าของ',
       disabled: true,
       iconName: 'fas fa-user',
       route: '/admin/member',
-      children: []
+      children: [
+        
+      ]
     },
+    
   ];
 }

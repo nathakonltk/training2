@@ -1,3 +1,4 @@
+$background:#2B2B2D;
 .layout {
     display: flex;
     flex-direction: column;
@@ -17,10 +18,10 @@
         }
     }
     
-    // .layout-breadcrumb {
-    //     // background-color: white;
-    //     // border-bottom: 1px solid lightgray;
-    // }
+    .layout-breadcrumb {
+        background-color:$background;
+        border-bottom: 1px solid lightgray;
+    }
     // .layout-footer {
     //     background-color: $white;
     // }

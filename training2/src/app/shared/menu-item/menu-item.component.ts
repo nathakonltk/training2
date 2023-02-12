@@ -1,28 +1,16 @@
-import { Component, HostBinding, Input } from '@angular/core';
-import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Router } from '@angular/router';
+import { Component,Input,HostBinding } from '@angular/core';
 import { NavItem } from 'src/app/_models/nav-item';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-menu-item',
   templateUrl: './menu-item.component.html',
-  styleUrls: ['./menu-item.component.scss'],
-  animations: [
-    trigger('indicatorRotate', [
-      state('collapsed', style({ transform: 'rotate(0deg)' })),
-      state('expanded', style({ transform: 'rotate(180deg)' })),
-      transition('expanded <=> collapsed',
-        animate('225ms cubic-bezier(0.4,0.0,0.2,1)')
-      ),
-    ])
-  ]
+  styleUrls: ['./menu-item.component.scss']
 })
 export class MenuItemComponent {
   expanded: boolean = false;
   @HostBinding('attr.aria-expanded') ariaExpanded = this.expanded;
   @Input() item!: NavItem;
   @Input() depth!: number;
-  
   constructor(
     public router: Router
 
@@ -31,6 +19,10 @@ export class MenuItemComponent {
       this.depth = 0;
     }
   }
+
+  ngOnInit(): void {
+  }
+  
   onItemSelected(item: NavItem) {
     if (!item.children || !item.children.length) {
       this.router.navigate([item.route]);
@@ -39,4 +31,5 @@ export class MenuItemComponent {
       this.expanded = !this.expanded;
     }
   }
+  
 }
