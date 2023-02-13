@@ -11,6 +11,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { LayoutAdminComponent } from './shared/layout-admin/layout-admin.component';
 import { MenuComponent } from './shared/menu/menu.component';
 import { MenuItemComponent } from './shared/menu-item/menu-item.component';
+import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MenuItemComponent } from './shared/menu-item/menu-item.component';
     LayoutAdminComponent,
     MenuComponent,
     MenuItemComponent,
+    BreadcrumbComponent,
   ],
   imports: [
     BrowserModule,

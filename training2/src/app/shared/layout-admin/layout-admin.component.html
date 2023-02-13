@@ -1,18 +1,24 @@
 <div class="layout">
-    <mat-toolbar class="layout-header" color="primary">
+    <mat-toolbar class="layout-header " color="primary">
         <app-header fxFlex (toggleClick)="toggleSideNav()"></app-header>
     </mat-toolbar>
-
+    <app-breadcrumb></app-breadcrumb>
     <mat-drawer-container fxFlex class="">
         <!-- mode="side,over,push" -->
-        <mat-drawer fxFlex="250px" #main_menu mode="side" class="layout-sidenav">
+        <mat-drawer fxFlex="250px" #main_menu mode="side" opened="open" class="layout-sidenav">
             <div fxLayout="column">
                 <app-menu></app-menu>
             </div>
         </mat-drawer>
         <mat-drawer-content  class="main_container" >
-            Main content
-            <router-outlet></router-outlet>
+            <!-- <div fxLayout="column" fxFill>
+                <div fxFlex="50px" class="layout-breadcrumb">
+                    <app-breadcrumb></app-breadcrumb>
+                </div>
+                <div fxFlex class="layout-content">
+                    <router-outlet></router-outlet>
+                </div>
+            </div> -->
         </mat-drawer-content>
         
     </mat-drawer-container>

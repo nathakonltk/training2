@@ -12,16 +12,16 @@ export class MenuComponent {
     {
       displayName: 'หน้าหลัก',
       disabled: true,
-      iconName: 'fas fa-user',
+      iconName: 'home',
       route: '/admin',
       children: [
         
       ]
     },
     {
-      displayName: 'ข้อมูลเจ้าของ',
+      displayName: 'ข้อมูลสมาชิก',
       disabled: true,
-      iconName: 'fas fa-user',
+      iconName: 'perm_identity',
       route: '/admin/member',
       children: [
         

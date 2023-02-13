@@ -11,17 +11,16 @@ $background:#2B2B2D;
         // background-color: #2b58a8;
         //border-top: 5px solid #1495ce;
         box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
-        z-index: 2;
+        z-index: 30;
+        padding: 4px 16px;
        // color: white;
-        .mat-toolbar {
-            height: 100px;
-        }
+        //height: 60px;
     }
     
-    .layout-breadcrumb {
-        background-color:$background;
-        border-bottom: 1px solid lightgray;
-    }
+    // .layout-breadcrumb {
+    //     background-color:$background;
+    //     border-bottom: 1px solid lightgray;
+    // }
     // .layout-footer {
     //     background-color: $white;
     // }

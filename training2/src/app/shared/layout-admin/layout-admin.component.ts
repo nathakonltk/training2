@@ -7,7 +7,7 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./layout-admin.component.scss']
 })
 export class LayoutAdminComponent {
-  @ViewChild('sidenav') sidenav!: MatSidenav;
+  @ViewChild('main_menu') sidenav!: MatSidenav;
   toggleSideNav() {
     this.sidenav.toggle();
   }
