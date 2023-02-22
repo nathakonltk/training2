@@ -5,9 +5,9 @@ import { LayoutAdminComponent } from './shared/layout-admin/layout-admin.compone
 const routes: Routes = [
   {
     path: 'admin',
-    // data: {
-    //   breadcrumb: 'หน้าหลัก'
-    // },
+    data: {
+      breadcrumb: 'หน้าหลัก'
+    },
     component: LayoutAdminComponent,
   },
   {

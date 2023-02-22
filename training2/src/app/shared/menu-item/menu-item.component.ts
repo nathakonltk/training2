@@ -23,13 +23,14 @@ export class MenuItemComponent {
   ngOnInit(): void {
   }
   
-  onItemSelected(item: NavItem) {
+  onItemSelected(item: NavItem) {console.log(5555);
     if (!item.children || !item.children.length) {
       this.router.navigate([item.route]);
     }
     if (item.children && item.children.length) {
       this.expanded = !this.expanded;
     }
+    console.log(item);
   }
   
 }
