@@ -1,5 +1,5 @@
 import { Component ,OnInit} from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { NavItem } from 'src/app/_models/nav-item';
 @Component({
   selector: 'app-breadcrumb',
@@ -7,12 +7,17 @@ import { NavItem } from 'src/app/_models/nav-item';
   styleUrls: ['./breadcrumb.component.scss']
 })
 export class BreadcrumbComponent implements OnInit {
-  router!:Router;
-  navitem!:NavItem;
-  myJSON = '{name:"John", age:30, cars:["Ford", "BMW", "Fiat"]}';
+   //router!:Router;
+  // navitem!:NavItem;product: Product | undefined;
+    breadcrumb="";
+ // Breadcrumb = '{name:"John", age:30, cars:["Ford", "BMW", "Fiat"]}';
   //bc=this.router;
+  constructor(private activatedRoute: ActivatedRoute) { }
   ngOnInit() {
-    //console.log(bc);
+    this.activatedRoute.data.subscribe(d => {
+      console.log(d['breadcrumb']); // ['home']
+      this.breadcrumb=d['breadcrumb'];
+    })
   }
   
 }

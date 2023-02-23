@@ -19,7 +19,7 @@ export class MenuComponent {
       ]
     },
     {
-      displayName: 'ข้อมูลสมาชิก',
+      displayName: 'จัดการข้อมูลสมาชิก',
       disabled: true,
       iconName: 'perm_identity',
       route: '/admin/member',

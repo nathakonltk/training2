@@ -12,6 +12,7 @@ import { LayoutAdminComponent } from './shared/layout-admin/layout-admin.compone
 import { MenuComponent } from './shared/menu/menu.component';
 import { MenuItemComponent } from './shared/menu-item/menu-item.component';
 import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
+import { MemberKeyinComponent } from './member/member-keyin/member-keyin.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
     MenuComponent,
     MenuItemComponent,
     BreadcrumbComponent,
+    MemberKeyinComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./layout-admin.component.scss']
 })
 export class LayoutAdminComponent {
+  
   @ViewChild('main_menu') sidenav!: MatSidenav;
   toggleSideNav() {
     this.sidenav.toggle();
@@ -32,4 +33,5 @@ export class LayoutAdminComponent {
   // ngAfterViewInit(): void {
   //   this.changeDetectorRef.detectChanges();
   // }
+  
 }

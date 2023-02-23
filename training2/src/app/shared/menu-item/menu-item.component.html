@@ -13,9 +13,7 @@
 
 
 
-<a mat-list-item href  >
+<a mat-list-item (click)="onItemSelected(item)"  >
     <mat-icon matListItemIcon style="margin-right: .5rem;">{{item.iconName}}</mat-icon> 
-    {{item.displayName}}
-
-    
+    {{item.displayName}}    
 </a>

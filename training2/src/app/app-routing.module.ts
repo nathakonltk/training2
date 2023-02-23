@@ -1,3 +1,4 @@
+import { MemberKeyinComponent } from './member/member-keyin/member-keyin.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -9,6 +10,13 @@ const routes: Routes = [
       breadcrumb: 'หน้าหลัก'
     },
     component: LayoutAdminComponent,
+    children: [
+      {
+        path: 'member',
+        data: { breadcrumb: 'จัดการข้อมูลสมาชิก'},
+        component: MemberKeyinComponent
+      },
+    ]
   },
   {
     path: '**',

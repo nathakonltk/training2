@@ -1,4 +1,5 @@
-import { Component,Input,HostBinding } from '@angular/core';
+//import { BreadcrumbComponent } from './../breadcrumb/breadcrumb.component';
+import { Component, Input, HostBinding, Output, EventEmitter } from '@angular/core';
 import { NavItem } from 'src/app/_models/nav-item';
 import { Router } from '@angular/router';
 @Component({
@@ -23,9 +24,10 @@ export class MenuItemComponent {
   ngOnInit(): void {
   }
   
-  onItemSelected(item: NavItem) {console.log(5555);
+  onItemSelected(item: NavItem) {
     if (!item.children || !item.children.length) {
       this.router.navigate([item.route]);
+      console.log('children');
     }
     if (item.children && item.children.length) {
       this.expanded = !this.expanded;
