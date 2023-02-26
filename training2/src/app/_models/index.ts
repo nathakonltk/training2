@@ -1,4 +1,4 @@
 export * from './nav-item';
-// export * from './uploadfile';
+export * from './title-name';
 export * from './member';
  

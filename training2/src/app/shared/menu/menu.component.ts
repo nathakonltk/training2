@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { NavItem } from '../../_models';
 
 @Component({
@@ -7,6 +7,7 @@ import { NavItem } from '../../_models';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+  @Output() breadcrumbMenuEvent=new EventEmitter<string>();
   navItems: NavItem[] = [
 
     {
@@ -29,4 +30,8 @@ export class MenuComponent {
     },
     
   ];
+  breadcrumdMenuChange(val:string){
+    this.breadcrumbMenuEvent.emit(val);
+    //console.log("breadcrumdMenuChange");
+  }
 }

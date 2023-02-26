@@ -1,4 +1,4 @@
-$background:#2B2B2D;
+$background:rgb(64 64 64);
 .layout {
     display: flex;
     flex-direction: column;
@@ -16,7 +16,9 @@ $background:#2B2B2D;
        // color: white;
         //height: 60px;
     }
-    
+    .layout-container{
+        background-color:$background;
+    }
     // .layout-breadcrumb {
     //     background-color:$background;
     //     border-bottom: 1px solid lightgray;
@@ -28,10 +30,11 @@ $background:#2B2B2D;
     //     background-color: $white;
     //     border-right: 1px solid lightgray;
     // }
-    // .layout-content {
-    //     background-color: #ececec;
-    //     padding: 15px;
-    // }
+    .layout-content {
+        font-weight: 400;
+        width: calc(100% - 341px);
+        padding: 20px;
+    }
     // .navbar-menu-subheader {
     //     height: 20px !important;
     //     padding: 5px 0px 0px 16px !important;
