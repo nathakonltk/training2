@@ -1,8 +1,10 @@
 import { TitleName,MemberModel,Tambon } from './../../_models/index';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
 import { FormBuilder, FormGroup ,FormControl, Validators} from '@angular/forms';
 import { DateAdapter } from '@angular/material/core';
 import { ProvAmpTamService } from '../../_service/index';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-member-keyin',
@@ -27,7 +29,11 @@ export class MemberKeyinComponent implements OnInit {
   constructor(
     private dateAdapter: DateAdapter<Date>,
     private fb:FormBuilder,
-    private ProvAmpTamService: ProvAmpTamService
+    private ProvAmpTamService: ProvAmpTamService,
+    private http:HttpClient,
+    // private dialog: MatDialog,
+    // @Inject(MAT_DIALOG_DATA) public data: any,
+    // public dialogRef: MatDialogRef<MemberKeyinComponent>,
   ){
     this.dateAdapter.setLocale('th-TH'); //dd/MM/yyyy
     this.form = this.fb.group({
@@ -48,9 +54,14 @@ export class MemberKeyinComponent implements OnInit {
   
   ngOnInit(): void {
     this.form.markAllAsTouched();
-    // this.ProvAmpTamService.getTambon().subscribe((res)=>{
-    //   this.tambon=res;
+    this.http.get("https://www.anapioficeandfire.com/api/books").subscribe(res=>{
+      console.log('res',res);
+    })
+    //this.ProvAmpTamService.getTambon().subscribe((res)=>{
+    //   console.log('res',res);
+    //   //this.tambon=res;
     // })
+   // console.log('tambon',this.tambon);
     
   }
 }

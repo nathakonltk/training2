@@ -28,7 +28,7 @@ import { MemberKeyinComponent } from './member/member-keyin/member-keyin.compone
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    //HttpClientModule,
+    HttpClientModule,
     MaterialModule.forRoot()
   ],
   providers: [],

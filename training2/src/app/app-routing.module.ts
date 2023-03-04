@@ -5,18 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutAdminComponent } from './shared/layout-admin/layout-admin.component';
 const routes: Routes = [
   {
-    path: 'admin',
-    data: {
-      breadcrumb: 'หน้าหลัก'
-    },
-    component: LayoutAdminComponent,
-    children: [
-      {
-        path: 'member',
-        data: { breadcrumb: 'จัดการข้อมูลสมาชิก'},
-        component: MemberKeyinComponent
-      },
-    ]
+    path: 'admin/member',
+    data: { breadcrumb: 'จัดการข้อมูลสมาชิก'},
+    component: MemberKeyinComponent
   },
   {
     path: '**',
